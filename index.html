@@ -1,457 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shakibul Chowdhury | Academic Website</title>
 
-<title>Shakibul Chowdhury | General Relativity & Astrophysics</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<link rel="stylesheet" href="assets/css/main.css" />
+    body {
+      font-family: Inter, Arial, sans-serif;
+      color: #ffffff;
+      background:
+        linear-gradient(rgba(4, 8, 25, 0.78), rgba(4, 8, 25, 0.92)),
+        url("images/background_cosmic.jpg") center/cover fixed;
+      line-height: 1.7;
+    }
 
-<style>
+    a { color: #9fd0ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #f5f7fb;
-  background:
-    linear-gradient(rgba(4,8,25,.82), rgba(4,8,25,.88)),
-    url("images/background_cosmic.jpg") center/cover fixed;
-  line-height: 1.7;
-}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+    }
 
-.container {
-  width: min(1180px, 92%);
-  margin: auto;
-}
+    nav .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
 
-a {
-  color: #8cc8ff;
-  text-decoration: none;
-}
+    nav ul {
+      display: flex;
+      gap: 26px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    .hero {
+      min-height: 86vh;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 48px;
+      align-items: center;
+    }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 0;
-}
+    .badge {
+      display: inline-block;
+      padding: 9px 17px;
+      border-radius: 999px;
+      border: 1px solid rgba(160, 210, 255, .45);
+      background: rgba(130, 170, 255, .13);
+      color: #c8e4ff;
+      margin-bottom: 24px;
+      font-size: .95rem;
+    }
 
-nav h2 {
-  font-size: 1.3rem;
-}
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: 1.02;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
 
-nav ul {
-  display: flex;
-  gap: 28px;
-  list-style: none;
-}
+    .hero-subtitle {
+      font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+      color: #9fd0ff;
+      margin-bottom: 22px;
+      font-weight: 500;
+    }
 
-.hero {
-  min-height: 88vh;
-  display: grid;
-  grid-template-columns: 1.3fr .8fr;
-  gap: 40px;
-  align-items: center;
-}
+    .hero-text {
+      font-size: 1.12rem;
+      color: rgba(255,255,255,.86);
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
 
-.badge {
-  display: inline-block;
-  border: 1px solid rgba(140,200,255,.55);
-  border-radius: 999px;
-  padding: 10px 18px;
-  color: #b8dfff;
-  margin-bottom: 22px;
-  font-size: .95rem;
-  backdrop-filter: blur(6px);
-}
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-h1 {
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
-  line-height: 1.08;
-  margin-bottom: 14px;
-  font-weight: 700;
-}
+    .btn {
+      padding: 13px 23px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.08);
+      color: white;
+      font-weight: 650;
+    }
 
-.hero-subtitle {
-  font-size: 1.35rem;
-  color: #8cc8ff;
-  margin-bottom: 28px;
-  font-weight: 500;
-}
+    .btn.primary {
+      background: linear-gradient(135deg, #4f72ff, #7b9dff);
+      border: none;
+    }
 
-.hero p {
-  font-size: 1.18rem;
-  max-width: 760px;
-  color: rgba(255,255,255,.88);
-  margin-bottom: 32px;
-}
+    .portrait {
+      text-align: center;
+    }
 
-.buttons {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
+    .portrait img {
+      width: min(320px, 75vw);
+      height: min(320px, 75vw);
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(160, 210, 255, .62);
+      box-shadow: 0 0 70px rgba(90, 145, 255, .45);
+    }
 
-.btn {
-  padding: 14px 26px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(255,255,255,.08);
-  color: white;
-  font-weight: 600;
-  transition: .25s;
-}
+    .portrait-card {
+      margin-top: 22px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      padding: 22px;
+      backdrop-filter: blur(12px);
+    }
 
-.btn:hover {
-  background: rgba(120,160,255,.22);
-  text-decoration: none;
-}
+    .portrait-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
 
-.btn.primary {
-  background: linear-gradient(135deg,#4f6cff,#6e8cff);
-  border: none;
-}
+    .portrait-card p {
+      color: rgba(255,255,255,.78);
+    }
 
-.profile {
-  background: transparent;
-  border: none;
-  text-align: center;
-  padding: 24px;
-}
+    section {
+      padding: 82px 0;
+    }
 
-.profile img {
-  width: 240px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid rgba(140,200,255,.65);
-  box-shadow: 0 0 45px rgba(80,140,255,.45);
-  margin-bottom: 18px;
-}
+    .section-head {
+      margin-bottom: 36px;
+    }
 
-.profile h3 {
-  font-size: 2rem;
-  margin-bottom: 8px;
-}
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 10px;
+    }
 
-.profile p {
-  color: rgba(255,255,255,.85);
-  font-size: 1.05rem;
-}
+    .section-head p {
+      color: rgba(255,255,255,.75);
+      max-width: 720px;
+      font-size: 1.05rem;
+    }
 
-section {
-  padding: 90px 0;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
 
-section h2 {
-  font-size: 3rem;
-  margin-bottom: 42px;
-}
+    .card, .paper, .contact-box {
+      background: rgba(255,255,255,.075);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 24px;
+      padding: 28px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 55px rgba(0,0,0,.18);
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 26px;
-}
+    .card h3, .paper h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
 
-.card {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 22px;
-  padding: 28px;
-  backdrop-filter: blur(10px);
-}
+    .card p, .paper p, .contact-box p {
+      color: rgba(255,255,255,.84);
+    }
 
-.card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 14px;
-}
+    .paper {
+      margin-bottom: 22px;
+      border-left: 4px solid #8db8ff;
+    }
 
-.card p {
-  color: rgba(255,255,255,.85);
-}
+    .paper-links {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-.paper {
-  background: rgba(255,255,255,.07);
-  border-left: 4px solid #7fa8ff;
-  border-radius: 18px;
-  padding: 26px;
-  margin-bottom: 24px;
-  backdrop-filter: blur(10px);
-}
+    .small-link {
+      display: inline-block;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(120,160,255,.15);
+      border: 1px solid rgba(160,210,255,.25);
+    }
 
-.paper h3 {
-  font-size: 1.7rem;
-  margin-bottom: 12px;
-}
+    .status {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 650;
+    }
 
-.paper p {
-  margin-bottom: 14px;
-  color: rgba(255,255,255,.88);
-}
+    .published {
+      color: #a6ffc7;
+      background: rgba(70, 220, 130, .15);
+    }
 
-.status {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: .9rem;
-  margin-top: 8px;
-}
+    .review {
+      color: #ffd891;
+      background: rgba(255, 190, 80, .16);
+    }
 
-.published {
-  background: rgba(60,200,120,.18);
-  color: #89ffb3;
-}
+    footer {
+      text-align: center;
+      padding: 44px 0;
+      color: rgba(255,255,255,.62);
+    }
 
-.review {
-  background: rgba(255,180,60,.16);
-  color: #ffd27f;
-}
+    @media (max-width: 880px) {
+      nav {
+        flex-direction: column;
+        gap: 18px;
+      }
 
-.contact-box {
-  background: rgba(255,255,255,.06);
-  border-radius: 22px;
-  padding: 34px;
-  border: 1px solid rgba(255,255,255,.1);
-}
+      nav ul {
+        justify-content: center;
+      }
 
-footer {
-  padding: 50px 0;
-  text-align: center;
-  color: rgba(255,255,255,.65);
-}
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-@media(max-width:900px){
+      .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-.hero {
-  grid-template-columns: 1fr;
-  text-align: center;
-}
-
-.buttons {
-  justify-content: center;
-}
-
-nav {
-  flex-direction: column;
-  gap: 18px;
-}
-
-nav ul {
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-}
-
-</style>
+      .buttons {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<div class="container">
-
-<nav>
-  <h2>Shakibul Chowdhury</h2>
-
-  <ul>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#teaching">Teaching</a></li>
-    <li><a href="files/Shak_CV.pdf">CV</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<section class="hero">
-
-<div>
-
-<div class="badge">
-General Relativity · Astrophysics · Polarization Transport
-</div>
-
-<h1>Shakibul Chowdhury</h1>
-
-<h2 class="hero-subtitle">
-Research in compact objects, relativistic radiation transport, and strong-gravity astrophysics
-</h2>
-
-<p>
-I work on relativistic ray tracing, polarization transport, and timing signatures in Kerr spacetime, with applications to black holes, neutron stars, and X-ray polarimetry.
-</p>
-
-<div class="buttons">
-
-<a class="btn primary" href="#research">
-View Research
-</a>
-
-<a class="btn" href="#publications">
-Publications
-</a>
-
-<a class="btn" href="files/Shak_CV.pdf">
-Download CV
-</a>
-
-</div>
-
-</div>
-
-<div class="profile">
-
-<img src="images/Shakib_profile.jpg" alt="Shakibul Chowdhury">
-
-<h3>Shakibul Chowdhury</h3>
-
-<p>
-Physics · CCNY
-</p>
-
-<p>
-GR · Ray tracing · Polarization transport · Compact objects
-</p>
-
-</div>
-
-</section>
-
-<section id="research">
-
-<h2>Current Research</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Kerr Polarization Transport</h3>
-
-<p>
-Parallel transport of polarization vectors along null geodesics in Kerr spacetime, with applications to X-ray polarimetry and black-hole spin diagnostics.
-</p>
-</div>
-
-<div class="card">
-<h3>Time-Delay Asymmetry</h3>
-
-<p>
-Mirror-paired arrival-time asymmetries in Kerr spacetime as a possible timing signature of frame dragging and black-hole spin.
-</p>
-</div>
-
-<div class="card">
-<h3>Neutron-Star Polarization</h3>
-
-<p>
-Geometric GR baselines for polarization transport in neutron-star spacetimes motivated by IXPE-era observations.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="publications">
-
-<h2>Publications & Preprints</h2>
-
-<div class="paper">
-
-<h3>
-Kerr Polarization Transport: Accuracy and Performance in General Relativistic Light Propagation
-</h3>
-
-<p>
-Published in <i>The Astrophysical Journal</i>. This work develops and validates relativistic polarization transport methods in Kerr spacetime for modeling observable X-ray polarization signatures from accreting black holes.
-</p>
-
-<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652" target="_blank">
-View ApJ Paper (DOI)
-</a>
-
-<br><br>
-
-<span class="status published">
-Published in ApJ
-</span>
-
-</div>
-
-<div class="paper">
-
-<h3>
-A New Timing Signature of Black Hole Spin: Time-Delay Asymmetry in Kerr Spacetime
-</h3>
-
-<p>
-Development of relativistic time-delay maps and asymmetry diagnostics in Kerr spacetime to identify observable timing signatures associated with black-hole spin, reverberation structure, and frame dragging.
-</p>
-
-<a href="https://arxiv.org/pdf/2605.11734" target="_blank">
-View arXiv Preprint
-</a>
-
-<br><br>
-
-<span class="status review">
-Submitted to CQG · Under Review
-</span>
-
-</div>
-
-</section>
-
-<section id="teaching">
-
-<h2>Teaching</h2>
-
-<div class="card">
-
-<p>
-I have experience teaching and tutoring physics and mathematics, including introductory physics, laboratory instruction, calculus, and upper-level problem solving.
-</p>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="contact-box">
-
-<p>
-Email: shakibul.chowdhury [at] email.ccny.cuny.edu
-</p>
-
-<p>
-<a href="https://ui.adsabs.harvard.edu/" target="_blank">ADS</a>
-·
-<a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-·
-<a href="https://github.com/shakibulchowdhury-GR" target="_blank">GitHub</a>
-</p>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 Shakibul Chowdhury
-</footer>
-
-</div>
-
+  <div class="container">
+
+    <nav>
+      <div class="brand">Shakibul Chowdhury Website</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="files/Shak_CV.pdf">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="hero" id="about">
+      <div>
+        <div class="badge">General Relativity · Astrophysics · Compact Objects</div>
+
+        <h1>Shakibul Chowdhury</h1>
+
+        <div class="hero-subtitle">
+          Research in strong-gravity astrophysics and relativistic light propagation
+        </div>
+
+        <p class="hero-text">
+          I work on general relativistic ray tracing, polarization transport, and timing signatures
+          in Kerr spacetime, with applications to black holes, neutron stars, X-ray binaries,
+          and X-ray polarimetry.
+        </p>
+
+        <div class="buttons">
+          <a class="btn primary" href="#research">View Research</a>
+          <a class="btn" href="#publications">Publications</a>
+          <a class="btn" href="files/Shak_CV.pdf">Download CV</a>
+        </div>
+      </div>
+
+      <div class="portrait">
+        <img src="images/Shakib_profile.jpg" alt="Shakibul Chowdhury" />
+        <div class="portrait-card">
+          <h3>Physics · CCNY</h3>
+          <p>GR · Ray tracing · Polarization transport · Compact objects</p>
+        </div>
+      </div>
+    </main>
+
+    <section id="research">
+      <div class="section-head">
+        <h2>Research Highlights</h2>
+        <p>
+          My research focuses on observable signatures of curved spacetime through photon propagation,
+          polarization evolution, and timing diagnostics near compact objects.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Kerr Polarization Transport</h3>
+          <p>
+            Parallel transport of polarization vectors along null geodesics in Kerr spacetime,
+            with applications to X-ray polarimetry and black-hole spin diagnostics.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Time-Delay Asymmetry</h3>
+          <p>
+            Mirror-paired arrival-time asymmetries in Kerr spacetime as a timing signature of
+            frame dragging, spin, and relativistic propagation effects.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Neutron-Star Polarization</h3>
+          <p>
+            Geometric GR baselines for polarization transport in neutron-star spacetimes,
+            motivated by IXPE-era compact-object observations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-head">
+        <h2>Publications & Preprints</h2>
+        <p>
+          Selected research papers and preprints in general relativistic radiation transport,
+          polarization, and compact-object timing.
+        </p>
+      </div>
+
+      <div class="paper">
+        <h3>Kerr Polarization Transport: Accuracy and Performance in General Relativistic Light Propagation</h3>
+        <p>
+          Published in <em>The Astrophysical Journal</em>. This work develops and validates
+          relativistic polarization transport methods in Kerr spacetime for modeling observable
+          X-ray polarization signatures from accreting black holes.
+        </p>
+
+        <div class="paper-links">
+          <a class="small-link" href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652" target="_blank">
+            View ApJ Paper
+          </a>
+          <a class="small-link" href="https://doi.org/10.3847/1538-4357/ae6652" target="_blank">
+            DOI
+          </a>
+        </div>
+
+        <span class="status published">Published in ApJ</span>
+      </div>
+
+      <div class="paper">
+        <h3>A New Timing Signature of Black Hole Spin: Time-Delay Asymmetry in Kerr Spacetime</h3>
+        <p>
+          This work introduces relativistic time-delay maps and mirror-paired asymmetry diagnostics
+          in Kerr spacetime as a possible observable signature of black-hole spin, reverberation
+          structure, and frame dragging.
+        </p>
+
+        <div class="paper-links">
+          <a class="small-link" href="https://arxiv.org/pdf/2605.11734" target="_blank">
+            arXiv Preprint
+          </a>
+        </div>
+
+        <span class="status review">Submitted to CQG · Under Review</span>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="section-head">
+        <h2>Teaching</h2>
+        <p>
+          I teach and tutor physics and mathematics, with experience in introductory physics,
+          laboratory instruction, calculus, and advanced problem solving.
+        </p>
+      </div>
+
+      <div class="card">
+        <p>
+          My teaching emphasizes conceptual clarity, structured problem solving, and connecting
+          mathematical methods to physical intuition.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+      </div>
+
+      <div class="contact-box">
+        <p>Email: shakibul.chowdhury [at] email.ccny.cuny.edu</p>
+        <p>
+          <a href="https://ui.adsabs.harvard.edu/" target="_blank">ADS</a> ·
+          <a href="https://scholar.google.com/" target="_blank">Google Scholar</a> ·
+          <a href="https://github.com/shakibulchowdhury-GR" target="_blank">GitHub</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Shakibul Chowdhury. Hosted with GitHub Pages.
+    </footer>
+
+  </div>
 </body>
 </html>
