@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Research — Shakibul Chowdhury</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Same quick overrides as index -->
+    <style>
+      body { background: url("images/background_cosmic.jpg") no-repeat center center fixed; background-size: cover; }
+      body::before { content:""; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:-1; }
+      #main > .inner, #sidebar > .inner { background: rgba(255,255,255,0.9); border-radius: 8px; padding-top: 2rem; padding-bottom: 2rem; }
+      .profile-wrap { text-align:center; } .profile-photo{display:inline-block; width:180px; height:180px; border-radius:50%; overflow:hidden;}
+      .profile-photo img{width:100%; height:100%; object-fit:cover; object-position:center;}
+      .figure { margin: 1rem 0; }
+      .figure img { width: 100%; height: auto; border-radius: 6px; }
+      .figure .caption { font-size: 0.9rem; color: #666; margin-top: 0.35rem; }
+      .code-link { font-size: 0.95rem; }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+
+          <!-- Header -->
+          <header id="header">
+            <a href="index.html" class="logo"><strong>Shakibul Chowdhury</strong> · Astrophysics</a>
+            <ul class="icons">
+              <li><a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX" class="icon brands fa-orcid"><span class="label">ORCID</span></a></li>
+              <li><a href="https://scholar.google.com/citations?user=XXXXX" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+              <li><a href="https://ui.adsabs.harvard.edu/" class="icon solid fa-star"><span class="label">ADS</span></a></li>
+              <li><a href="https://github.com/yourhandle" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+              <li><a href="mailto:your@email" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+          </header>
+
+          <!-- Page -->
+          <section id="main" class="alt">
+            <div class="inner">
+              <header class="major">
+                <h1>Research</h1>
+                <p>GR light-bending, X-ray binaries, and polarization.</p>
+              </header>
+
+              <!-- Cyg X-1 -->
+              <a id="cygx1"></a>
+              <h2>Cyg X-1 Polarization (IXPE × NuSTAR)</h2>
+              <p>
+                Modeling polarization degree (PD) and angle (PA) vs. inner radius and spin. I use fast
+                analytic light-bending with first-order Kerr corrections and validate against a
+                geodesic-tracing baseline. The goal is observable-level accuracy with near real-time speed.
+              </p>
+              <ul class="code-link">
+                <li>Slides/Notes: <a href="files/week11_notes.pdf">Week 11</a> · <a href="files/week10_slides.pdf">Week 10</a></li>
+                <li>Code (placeholder): <a href="https://github.com/yourhandle/cygx1-polarization">GitHub</a></li>
+              </ul>
+              <div class="figure">
+                <img src="images/cygx1_plot.png" alt="Cyg X-1 polarization example plot (placeholder)">
+                <div class="caption">Example PD/PA vs inner radius (replace with your plot).</div>
+              </div>
+
+              <hr />
+
+              <!-- GR bending -->
+              <a id="bending"></a>
+              <h2>GR Light-Bending Approximations</h2>
+              <p>
+                Comparing Beloborodov mapping and Padé/series approaches; building uniform error
+                envelopes vs. full ray-tracing. I quantify speedups and accuracy tradeoffs for use in
+                inference pipelines.
+              </p>
+              <div class="figure">
+                <img src="images/kerr_bending_diag.png" alt="Kerr light-bending schematic (placeholder)">
+                <div class="caption">Kerr light-bending schematic (replace with your diagram/figure).</div>
+              </div>
+
+              <hr />
+
+              <!-- Photometry -->
+              <a id="binaries"></a>
+              <h2>Binary-Star Photometry</h2>
+              <p>
+                Reductions with ASTAP/GBO data and Gaia DR3 cross-matches to identify candidates for follow-up.
+                Pipeline emphasis on reproducibility and uncertainty tracking.
+              </p>
+              <div class="figure">
+                <img src="images/lightcurve_example.png" alt="Binary-star light curve (placeholder)">
+                <div class="caption">Example phased light curve (replace with your data).</div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <div class="inner">
+
+          <section class="alt profile-wrap">
+            <span class="profile-photo" style="margin-bottom:0.7rem;">
+              <img src="images/shakib_profile.jpg" alt="Shakibul Chowdhury" />
+            </span>
+            <h2 style="margin:0.5rem 0 0.25rem 0;">Shakibul Chowdhury</h2>
+            <p style="margin-top:0;">Physics · CCNY<br/>GR, X-ray binaries, polarization</p>
+          </section>
+
+          <nav id="menu">
+            <header class="major"><h2>Menu</h2></header>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="research.html">Research</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="teaching.html">Teaching</a></li>
+              <li><a href="cv.html">CV</a></li>
+              <li><a href="resources.html">Resources</a></li>
+            </ul>
+          </nav>
+
+          <section>
+            <header class="major"><h2>Get in touch</h2></header>
+            <ul class="contact">
+              <li class="icon solid fa-envelope"><a href="mailto:your@email">your@email</a></li>
+              <li class="icon brands fa-orcid"><a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">ORCID</a></li>
+              <li class="icon brands fa-google"><a href="https://scholar.google.com/citations?user=XXXXX">Google Scholar</a></li>
+              <li class="icon solid fa-star"><a href="https://ui.adsabs.harvard.edu/">ADS</a></li>
+              <li class="icon brands fa-github"><a href="https://github.com/yourhandle">GitHub</a></li>
+            </ul>
+          </section>
+
+          <footer id="footer">
+            <p class="copyright">
+              &copy; 2025 Shakibul Chowdhury. Design: <a href="https://html5up.net">HTML5 UP</a>.
+            </p>
+          </footer>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
