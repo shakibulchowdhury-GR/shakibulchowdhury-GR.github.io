@@ -1,272 +1,166 @@
-<!DOCTYPE HTML>
-<!--
-  Site: Shakibul Chowdhury — Astrophysics
-  Base template: Editorial by HTML5 UP (html5up.net)
-  License: CCA 3.0 (keep the credit link in the footer)
--->
-<html>
-  <head>
-    <title>Shakibul Chowdhury — Astrophysics</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shakibul Chowdhury | General Relativity & Astrophysics</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(5,8,20,.82), rgba(5,8,20,.88)),
+                  url("background_cosmic.jpg") center/cover fixed;
+      color: #f5f7fb;
+      line-height: 1.6;
+    }
+    a { color: #8cc8ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1100px, 92%); margin: auto; }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 0;
+    }
+    nav h2 { font-size: 1.2rem; }
+    nav ul { display: flex; gap: 22px; list-style: none; flex-wrap: wrap; }
+    .hero {
+      min-height: 75vh; display: grid; grid-template-columns: 1.4fr .8fr;
+      gap: 40px; align-items: center;
+    }
+    .badge {
+      display: inline-block; padding: 8px 14px; border: 1px solid #5278ff;
+      border-radius: 999px; color: #bcd6ff; margin-bottom: 18px;
+      background: rgba(82,120,255,.12);
+    }
+    h1 { font-size: clamp(2.4rem, 6vw, 5rem); line-height: 1.05; margin-bottom: 18px; }
+    .subtitle { font-size: 1.25rem; color: #d4ddf5; max-width: 760px; margin-bottom: 26px; }
+    .buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 18px; border-radius: 12px; border: 1px solid #7897ff;
+      background: rgba(255,255,255,.08); color: white; font-weight: bold;
+    }
+    .btn.primary { background: #4969ff; border-color: #4969ff; }
+    .profile {
+      background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18);
+      border-radius: 24px; padding: 24px; text-align: center; backdrop-filter: blur(12px);
+    }
+    .profile img {
+      width: 190px; height: 190px; border-radius: 50%; object-fit: cover;
+      border: 3px solid rgba(255,255,255,.35); margin-bottom: 18px;
+    }
+    section { padding: 70px 0; }
+    .section-title { font-size: 2.2rem; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card {
+      background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.16);
+      border-radius: 20px; padding: 24px; backdrop-filter: blur(10px);
+    }
+    .card h3 { margin-bottom: 10px; color: #ffffff; }
+    .card p { color: #d7def0; }
+    .pub {
+      background: rgba(255,255,255,.09); border-left: 4px solid #6e8cff;
+      padding: 20px; border-radius: 14px; margin-bottom: 16px;
+    }
+    footer { padding: 35px 0; color: #b8c2dc; text-align: center; }
+    @media (max-width: 850px) {
+      .hero, .grid { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; gap: 15px; flex-direction: column; }
+    }
+  </style>
+</head>
 
-    <!-- QUICK CUSTOM STYLES (safe overrides) -->
-    <style>
-      /* Full-page cosmic background */
-      body {
-        background: url("images/background_cosmic.jpg") no-repeat center center fixed;
-        background-size: cover;
-      }
-      /* Dark overlay for readability */
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.55);
-        z-index: -1;
-      }
+<body>
+  <div class="container">
+    <nav>
+      <h2>Shakibul Chowdhury</h2>
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="Shak_CV.pdf">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-      /* Make content panels slightly translucent so the background peeks through */
-      #main > .inner,
-      #sidebar > .inner {
-        background: rgba(255,255,255,0.9);
-        border-radius: 8px;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-      }
-
-      /* Tighter top spacing under the site header rule */
-      #main > .inner header.major { margin-top: 0.5rem; }
-
-      /* Circular, centered sidebar headshot */
-      .profile-wrap {
-        text-align: center;
-      }
-      .profile-photo {
-        display: inline-block;
-        width: 180px; height: 180px;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-      .profile-photo img {
-        width: 100%; height: 100%;
-        object-fit: cover; object-position: center;
-      }
-
-      /* Optional: make header icons a bit lighter on cosmic theme */
-      #header .icons a { opacity: 0.9; }
-
-      /* Small tweak so the right banner image keeps a tidy aspect */
-      #banner .image.object img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style>
-  </head>
-
-  <body class="is-preload">
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-      <!-- Main -->
-      <div id="main">
-        <div class="inner">
-
-          <!-- Header -->
-          <header id="header">
-            <a href="index.html" class="logo"><strong>Shakibul Chowdhury</strong> · Astrophysics</a>
-            <ul class="icons">
-              <li><a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX" class="icon brands fa-orcid"><span class="label">ORCID</span></a></li>
-              <li><a href="https://scholar.google.com/citations?user=XXXXX" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
-              <li><a href="https://ui.adsabs.harvard.edu/" class="icon solid fa-star"><span class="label">ADS</span></a></li>
-              <li><a href="https://github.com/yourhandle" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-              <li><a href="mailto:your@email" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-            </ul>
-          </header>
-
-          <!-- Banner -->
-          <section id="banner">
-            <div class="content">
-              <header>
-                <h1>Astrophysics &amp; General Relativity</h1>
-                <p>Graduate student, City College of New York</p>
-              </header>
-              <p>
-                I work on high-mass X-ray binaries and GR light-bending with applications to polarization
-                (IXPE context) and black-hole spin diagnostics. Current focus: Cyg X-1 disk polarization,
-                first-order Kerr extensions to analytic transport, and validation against geodesic baselines.
-              </p>
-              <ul class="actions">
-                <li><a href="cv.html" class="button primary">CV</a></li>
-                <li><a href="research.html" class="button">Research</a></li>
-              </ul>
-            </div>
-
-            <!-- Right-side banner image -->
-            <span class="image object">
-              <img src="images/MG_4553_rawfile.jpg" alt="Night sky astrophotography" />
-            </span>
-          </section>
-
-          <!-- Research highlights -->
-          <section>
-            <header class="major">
-              <h2>Research highlights</h2>
-            </header>
-            <div class="features">
-              <article>
-                <span class="icon solid fa-compact-disc"></span>
-                <div class="content">
-                  <h3>Cyg X-1 polarization (IXPE × NuSTAR)</h3>
-                  <p>PD/PA vs inner radius and spin using fast analytic light-bending plus Kerr
-                  corrections; benchmarking accuracy vs ray-tracing.</p>
-                  <ul class="actions">
-                    <li><a href="research.html#cygx1" class="button small">Details</a></li>
-                  </ul>
-                </div>
-              </article>
-              <article>
-                <span class="icon solid fa-bolt"></span>
-                <div class="content">
-                  <h3>GR light-bending approximations</h3>
-                  <p>Beloborodov mapping, Padé/series, and uniform-error envelopes with speed/accuracy
-                  comparisons for observational use.</p>
-                  <ul class="actions">
-                    <li><a href="research.html#bending" class="button small">Method</a></li>
-                  </ul>
-                </div>
-              </article>
-              <article>
-                <span class="icon solid fa-star"></span>
-                <div class="content">
-                  <h3>Binary-star photometry</h3>
-                  <p>GBO/ASTAP reductions, Gaia DR3 cross-matches, and candidate selection for follow-up.</p>
-                  <ul class="actions">
-                    <li><a href="research.html#binaries" class="button small">Notes</a></li>
-                  </ul>
-                </div>
-              </article>
-              <article>
-                <span class="icon solid fa-book"></span>
-                <div class="content">
-                  <h3>Teaching &amp; outreach</h3>
-                  <p>Lab instruction and tutoring; open materials and problem sets.</p>
-                  <ul class="actions">
-                    <li><a href="teaching.html" class="button small">Teaching</a></li>
-                  </ul>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <!-- Recent items / posts -->
-          <section>
-            <header class="major">
-              <h2>Updates</h2>
-            </header>
-            <div class="posts">
-              <article>
-                <a href="files/week11_notes.pdf" class="image"><img src="images/pic01.jpg" alt="" /></a>
-                <h3>Kerr transport: quick accuracy checks</h3>
-                <p>Hard-case PD/PA validation and timing vs geodesic baseline.</p>
-                <ul class="actions">
-                  <li><a href="files/week11_notes.pdf" class="button">Notes (PDF)</a></li>
-                </ul>
-              </article>
-              <article>
-                <a href="files/week10_slides.pdf" class="image"><img src="images/pic02.jpg" alt="" /></a>
-                <h3>First-order Kerr extension</h3>
-                <p>Observable-level comparison to Schwarzschild baseline; error envelopes.</p>
-                <ul class="actions">
-                  <li><a href="files/week10_slides.pdf" class="button">Slides</a></li>
-                </ul>
-              </article>
-              <article>
-                <a href="publications.html" class="image"><img src="images/pic03.jpg" alt="" /></a>
-                <h3>Publications &amp; preprints</h3>
-                <p>Links to ADS, arXiv, and selected talks/posters.</p>
-                <ul class="actions">
-                  <li><a href="publications.html" class="button">View list</a></li>
-                </ul>
-              </article>
-              <article>
-                <a href="resources.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
-                <h3>Resources</h3>
-                <p>Code, datasets, and reading lists useful for GR + X-ray astronomy.</p>
-                <ul class="actions">
-                  <li><a href="resources.html" class="button">Open</a></li>
-                </ul>
-              </article>
-            </div>
-          </section>
-
+    <main class="hero">
+      <div>
+        <span class="badge">General Relativity · Astrophysics · Polarization</span>
+        <h1>Research in relativistic light propagation and high-energy astrophysics.</h1>
+        <p class="subtitle">
+          I work on general relativistic ray tracing, polarization transport, Kerr spacetime timing
+          signatures, and compact-object astrophysics, with applications to black holes, neutron stars,
+          and X-ray polarimetry.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#research">View Research</a>
+          <a class="btn" href="#publications">Publications</a>
+          <a class="btn" href="Shak_CV.pdf">Download CV</a>
         </div>
       </div>
 
-      <!-- Sidebar -->
-      <div id="sidebar">
-        <div class="inner">
+      <div class="profile">
+        <img src="shak_profile_square.jpg" alt="Shakibul Chowdhury" />
+        <h2>Shakibul Chowdhury</h2>
+        <p>Physics · CCNY</p>
+        <p>GR, ray tracing, polarization transport, compact objects</p>
+      </div>
+    </main>
 
-          <!-- Profile -->
-          <section class="alt profile-wrap">
-            <span class="profile-photo" style="margin-bottom:0.7rem;">
-              <img src="images/shakib_profile.jpg" alt="Shakibul Chowdhury" />
-            </span>
-            <h2 style="margin:0.5rem 0 0.25rem 0;">Shakibul Chowdhury</h2>
-            <p style="margin-top:0;">Physics · CCNY<br/>GR, X-ray binaries, polarization</p>
-          </section>
-
-          <!-- Menu -->
-          <nav id="menu">
-            <header class="major">
-              <h2>Menu</h2>
-            </header>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="research.html">Research</a></li>
-              <li><a href="publications.html">Publications</a></li>
-              <li><a href="teaching.html">Teaching</a></li>
-              <li><a href="cv.html">CV</a></li>
-              <li><a href="resources.html">Resources</a></li>
-            </ul>
-          </nav>
-
-          <!-- Contact -->
-          <section>
-            <header class="major">
-              <h2>Get in touch</h2>
-            </header>
-            <ul class="contact">
-              <li class="icon solid fa-envelope"><a href="mailto:your@email">your@email</a></li>
-              <li class="icon brands fa-orcid"><a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">ORCID</a></li>
-              <li class="icon brands fa-google"><a href="https://scholar.google.com/citations?user=XXXXX">Google Scholar</a></li>
-              <li class="icon solid fa-star"><a href="https://ui.adsabs.harvard.edu/">ADS</a></li>
-              <li class="icon brands fa-github"><a href="https://github.com/yourhandle">GitHub</a></li>
-            </ul>
-          </section>
-
-          <!-- Footer -->
-          <footer id="footer">
-            <p class="copyright">
-              &copy; 2025 Shakibul Chowdhury.
-              Design: <a href="https://html5up.net">HTML5 UP</a>. Images: Unsplash/NASA/ESA or as credited.
-            </p>
-          </footer>
-
+    <section id="research">
+      <h2 class="section-title">Current Research</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Kerr Polarization Transport</h3>
+          <p>Parallel transport of polarization vectors along null geodesics in Kerr spacetime, with applications to X-ray polarimetry and black hole spin diagnostics.</p>
+        </div>
+        <div class="card">
+          <h3>Time-Delay Asymmetry</h3>
+          <p>Mirror-paired arrival-time asymmetries in Kerr spacetime as a possible timing signature of frame dragging and black hole spin.</p>
+        </div>
+        <div class="card">
+          <h3>Neutron-Star Polarization</h3>
+          <p>Geometric GR baselines for polarization transport in neutron-star spacetimes, motivated by IXPE-era observations.</p>
         </div>
       </div>
+    </section>
 
-    </div>
+    <section id="publications">
+      <h2 class="section-title">Publications & Preprints</h2>
+      <div class="pub">
+        <h3>Kerr Polarization Transport: Accuracy and Performance in General Relativistic Light Propagation</h3>
+        <p><em>The Astrophysical Journal</em>. DOI: 10.3847/1538-4357/ae6652.</p>
+      </div>
+      <div class="pub">
+        <h3>A New Timing Signature of Black Hole Spin: Time-Delay Asymmetry in Kerr Spacetime</h3>
+        <p>Submitted manuscript / preprint.</p>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <section id="teaching">
+      <h2 class="section-title">Teaching</h2>
+      <div class="card">
+        <p>
+          I have experience teaching and tutoring physics and mathematics, including introductory physics,
+          laboratory instruction, calculus, and upper-level problem solving.
+        </p>
+      </div>
+    </section>
 
-  </body>
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="card">
+        <p>Email: shakibul.chowdhury [at] email.ccny.cuny.edu</p>
+        <p>
+          Links:
+          <a href="https://ui.adsabs.harvard.edu/">ADS</a> ·
+          <a href="https://scholar.google.com/">Google Scholar</a> ·
+          <a href="https://github.com/shakibulchowdhury-GR">GitHub</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Shakibul Chowdhury. Hosted with GitHub Pages.
+    </footer>
+  </div>
+</body>
 </html>
