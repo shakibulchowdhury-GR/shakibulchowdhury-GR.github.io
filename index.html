@@ -15,9 +15,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 12% 10%, rgba(160, 185, 220, 0.32), transparent 30%),
-    radial-gradient(circle at 88% 12%, rgba(190, 205, 235, 0.28), transparent 34%),
-    radial-gradient(circle at 50% 100%, rgba(220, 230, 245, 0.35), transparent 42%),
+    radial-gradient(circle at 12% 10%, rgba(160, 185, 220, 0.30), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(190, 205, 235, 0.24), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(220, 230, 245, 0.30), transparent 42%),
     linear-gradient(135deg, #eef3f8, #f8fafc 45%, #eef4fb);
   color: #222;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -30,11 +30,11 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle, rgba(80, 105, 135, 0.18) 1px, transparent 1px),
-    radial-gradient(circle, rgba(80, 105, 135, 0.10) 1px, transparent 1px);
-  background-size: 120px 120px, 180px 180px;
+    radial-gradient(circle, rgba(80, 105, 135, 0.14) 1px, transparent 1px),
+    radial-gradient(circle, rgba(80, 105, 135, 0.08) 1px, transparent 1px);
+  background-size: 130px 130px, 190px 190px;
   background-position: 20px 30px, 80px 100px;
-  opacity: 0.28;
+  opacity: 0.22;
 }
 
 .page-wrapper {
@@ -45,8 +45,8 @@ body::before {
 }
 
 .site-header {
-  background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(238,244,251,0.96));
-  padding: 55px 60px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(238,244,251,0.96));
+  padding: 58px 62px;
   border-radius: 18px 18px 0 0;
   border: 1px solid #d4dee9;
   box-shadow: 0 10px 30px rgba(55, 80, 110, 0.08);
@@ -78,12 +78,34 @@ body::before {
   font-size: 1rem;
 }
 
+.profile-links {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.profile-links a {
+  color: #2f5877;
+  background: rgba(238, 244, 251, 0.9);
+  border: 1px solid #d4dee9;
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-size: 0.94rem;
+  text-decoration: none;
+}
+
+.profile-links a:hover {
+  background: #e4edf6;
+  text-decoration: none;
+}
+
 .nav-bar {
-  background: #6f8294;
+  background: #7b8fa1;
   padding: 14px 36px;
   border-radius: 0 0 18px 18px;
-  margin-bottom: 40px;
-  box-shadow: 0 8px 22px rgba(55, 80, 110, 0.12);
+  margin-bottom: 42px;
+  box-shadow: 0 8px 22px rgba(55, 80, 110, 0.11);
 }
 
 .nav-links {
@@ -101,19 +123,19 @@ body::before {
 }
 
 .nav-links a:hover {
-  opacity: 0.75;
+  opacity: 0.78;
 }
 
 .content {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 60px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 62px;
   border-radius: 18px;
   border: 1px solid #d8e2ec;
   box-shadow: 0 12px 35px rgba(55, 80, 110, 0.08);
 }
 
 section {
-  margin-bottom: 72px;
+  margin-bottom: 78px;
 }
 
 section:last-child {
@@ -123,7 +145,7 @@ section:last-child {
 h2 {
   font-size: 2rem;
   color: #2f5877;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   padding-bottom: 10px;
   border-bottom: 1px solid #d9e1e8;
 }
@@ -134,7 +156,8 @@ p {
 }
 
 .paper {
-  margin-top: 28px;
+  margin-top: 32px;
+  padding-bottom: 8px;
 }
 
 .paper-title {
@@ -188,12 +211,12 @@ footer {
     font-size: 2.6rem;
   }
 
-  .content {
-    padding: 35px;
-  }
-
   .site-header {
     padding: 40px;
+  }
+
+  .content {
+    padding: 35px;
   }
 
   .nav-bar {
@@ -231,6 +254,13 @@ City College of New York (CUNY)
 General Relativity • Black Holes • X-ray Polarimetry • Compact Objects
 </div>
 
+<div class="profile-links">
+<a href="https://arxiv.org/abs/2605.11734" target="_blank">arXiv</a>
+<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652" target="_blank">ApJ Paper</a>
+<a href="files/Shak_CV.pdf" target="_blank">CV</a>
+<a href="mailto:shakibul.chowdhury@gmail.com">Email</a>
+</div>
+
 </header>
 
 <nav class="nav-bar">
@@ -239,14 +269,13 @@ General Relativity • Black Holes • X-ray Polarimetry • Compact Objects
 
 <a href="#interests">Research Interests</a>
 <a href="#summary">Research Summary</a>
+<a href="#current">Current Projects</a>
 <a href="#publications">Publications</a>
 <a href="#submitted">Submitted Work</a>
 <a href="#experience">Research Experience</a>
 <a href="#training">Training</a>
 <a href="#notes">Notes & Resources</a>
 <a href="#teaching">Teaching</a>
-<a href="files/Shak_CV.pdf" target="_blank">CV</a>
-<a href="mailto:shakibul.chowdhury@gmail.com">Email</a>
 
 </div>
 
@@ -273,10 +302,45 @@ neutron stars, and observable signatures of strong gravity.
 <p>
 My research focuses on polarization transport, relativistic timing
 phenomena, and radiation transport in Kerr spacetime, with
-applications to X-ray polarimetry (IXPE), black-hole spin diagnostics,
+applications to X-ray polarimetry, black-hole spin diagnostics,
 and compact-object astrophysics. I develop computational frameworks
 for strong-gravity observables using numerical methods in Python and C++.
 </p>
+
+</section>
+
+<section id="current">
+
+<h2>Current Projects</h2>
+
+<div class="paper">
+
+<div class="paper-title">
+Relativistic Time-Delay Asymmetry in Kerr Spacetime
+</div>
+
+<p>
+I am studying mirror-paired photon arrival-time asymmetries in Kerr spacetime
+as potential timing signatures of black-hole spin and frame dragging.
+This work connects relativistic ray tracing, image-plane delay maps,
+and observationally motivated timing diagnostics.
+</p>
+
+</div>
+
+<div class="paper">
+
+<div class="paper-title">
+Polarization Transport in Strong Gravity
+</div>
+
+<p>
+I develop and test numerical methods for EVPA evolution and parallel transport
+of polarization vectors along null geodesics, with applications to X-ray
+polarimetry and compact-object observations.
+</p>
+
+</div>
 
 </section>
 
