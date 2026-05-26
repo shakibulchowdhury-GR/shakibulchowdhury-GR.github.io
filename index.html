@@ -1,368 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shakibul Chowdhury</title>
 
-  <title>Shakibul Chowdhury</title>
+<style>
 
-  <style>
+html {
+    scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      background: #f7f2df;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #111;
-      line-height: 1.75;
-      font-size: 1.03rem;
-    }
+body {
+    margin: 0;
+    background: #f6eef4;
+    color: #222;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.75;
+}
 
-    .page {
-      max-width: 1080px;
-      margin: 34px auto;
-      padding: 0 26px;
-    }
+/* ===== MAIN WRAPPER ===== */
 
-    .site-header {
-      background: linear-gradient(135deg, #dbe7e4, #f2ead5);
-      border: 1px solid #d7ccb1;
-      padding: 38px 48px;
-      border-radius: 12px 12px 0 0;
-    }
+.page-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-    .site-header h1 {
-      margin: 0 0 10px 0;
-      font-size: 3.3rem;
-      font-weight: 700;
-      color: #17324d;
-    }
+/* ===== HEADER ===== */
 
-    .site-header p {
-      margin: 6px 0;
-      color: #333;
-      font-size: 1.08rem;
-    }
+.site-header {
+    background: linear-gradient(135deg, #eadbe7, #f6eef4);
+    padding: 55px 60px;
+    border-radius: 18px 18px 0 0;
+    border: 1px solid #e2d2dd;
+}
 
-    .nav-bar {
-      background: #b7a383;
-      padding: 16px 24px;
-      border-radius: 0 0 12px 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-      margin-bottom: 38px;
-    }
+.site-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    color: #2a1f28;
+    letter-spacing: -1px;
+}
 
-    .nav-bar a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.94rem;
-      letter-spacing: 0.02em;
-    }
+.site-subtitle {
+    margin-top: 12px;
+    font-size: 1.35rem;
+    color: #5d4b56;
+}
 
-    .nav-bar a:hover {
-      text-decoration: underline;
+.site-affiliation {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #6d5d66;
+}
+
+.site-tags {
+    margin-top: 20px;
+    color: #7a6872;
+    font-size: 1rem;
+}
+
+/* ===== NAVIGATION ===== */
+
+.nav-bar {
+    background: #9b6b83;
+    padding: 18px 40px;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.98rem;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.75;
+}
+
+/* ===== CONTENT AREA ===== */
+
+.content {
+    background: #fffafb;
+    padding: 60px;
+    border-radius: 18px;
+    border: 1px solid #eadce5;
+}
+
+/* ===== SECTIONS ===== */
+
+section {
+    margin-bottom: 65px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #7a4261;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4d5de;
+}
+
+p {
+    font-size: 1.08rem;
+    color: #2d2d2d;
+}
+
+/* ===== PUBLICATION STYLING ===== */
+
+.paper {
+    margin-top: 25px;
+}
+
+.paper-title {
+    font-weight: 700;
+    font-size: 1.18rem;
+    margin-bottom: 8px;
+}
+
+.paper-title a {
+    color: #2a1f28;
+    text-decoration: none;
+}
+
+.paper-title a:hover {
+    color: #7b3f61;
+}
+
+.journal {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* ===== LISTS ===== */
+
+ul {
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* ===== LINKS ===== */
+
+a {
+    color: #7b3f61;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    .site-title {
+        font-size: 2.6rem;
     }
 
     .content {
-      background: #fffdf6;
-      border: 1px solid #e0d8c4;
-      padding: 46px 54px 70px 54px;
-      border-radius: 10px;
+        padding: 35px;
     }
 
-    h2 {
-      color: #1f4e79;
-      font-size: 1.9rem;
-      margin-top: 58px;
-      margin-bottom: 18px;
-      border-bottom: 1px solid #d8d0bd;
-      padding-bottom: 7px;
+    .site-header {
+        padding: 40px;
     }
 
-    h2:first-child {
-      margin-top: 0;
+    .nav-bar {
+        padding: 16px 20px;
     }
 
-    h3 {
-      margin-top: 32px;
-      margin-bottom: 10px;
-      font-size: 1.18rem;
-      color: #222;
+    .nav-links {
+        gap: 18px;
     }
 
-    p {
-      margin-bottom: 18px;
-    }
+}
 
-    ul {
-      margin-left: 28px;
-      margin-bottom: 22px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    a {
-      color: #004b8d;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .paper {
-      margin-bottom: 42px;
-    }
-
-    .paper-title {
-      font-size: 1.16rem;
-      font-weight: 700;
-      margin-bottom: 7px;
-      color: #111;
-    }
-
-    .status {
-      color: #555;
-      font-style: italic;
-      margin-bottom: 12px;
-    }
-
-    footer {
-      margin-top: 80px;
-      padding-top: 18px;
-      border-top: 1px solid #d8d0bd;
-      color: #666;
-      font-size: 0.93rem;
-    }
-
-  </style>
-
+</style>
 </head>
 
 <body>
 
-  <div class="page">
+<div class="page-wrapper">
+
+    <!-- ===== HEADER ===== -->
 
     <header class="site-header">
 
-      <h1>Shakibul Chowdhury</h1>
+        <h1 class="site-title">Shakibul Chowdhury</h1>
 
-      <p>Astrophysics Researcher</p>
+        <div class="site-subtitle">
+            Astrophysics Researcher
+        </div>
 
-      <p>City College of New York (CUNY)</p>
+        <div class="site-affiliation">
+            City College of New York (CUNY)
+        </div>
 
-      <p>
-        Relativistic Astrophysics · Compact Objects · Strong Gravity
-      </p>
+        <div class="site-tags">
+            Relativistic Astrophysics • Compact Objects • Strong Gravity
+        </div>
 
     </header>
 
+    <!-- ===== NAVIGATION ===== -->
 
     <nav class="nav-bar">
 
-      <a href="#research-interests">RESEARCH INTERESTS</a>
+        <div class="nav-links">
 
-      <a href="#publications">PUBLICATIONS</a>
+            <a href="#interests">Research Interests</a>
+            <a href="#summary">Research Summary</a>
+            <a href="#publications">Publications</a>
+            <a href="#submitted">Submitted Work</a>
+            <a href="#experience">Research Experience</a>
+            <a href="#training">Training</a>
+            <a href="#notes">Notes & Resources</a>
+            <a href="#teaching">Teaching</a>
+            <a href="/files/Shak_CV.pdf" target="_blank">CV</a>
+            <a href="mailto:shakibul.chowdhury@gmail.com">Email</a>
 
-      <a href="#submitted-work">SUBMITTED WORK</a>
-
-      <a href="#research-experience">RESEARCH</a>
-
-      <a href="#teaching">TEACHING</a>
-
-      <a href="notes.html">NOTES</a>
-
-      <a href="files/Shak_CV.pdf" target="_blank">CV</a>
-
-      <a href="mailto:shakibul.chowdhury@gmail.com">EMAIL</a>
+        </div>
 
     </nav>
 
+    <!-- ===== CONTENT ===== -->
 
     <main class="content">
 
-      <h2 id="research-interests">Research Interests</h2>
+        <!-- RESEARCH INTERESTS -->
 
-      <p>
-        General relativity, compact objects, relativistic radiation transport,
-        Kerr spacetime, X-ray polarimetry, black-hole timing signatures,
-        neutron stars, and observable signatures of strong gravity.
-      </p>
+        <section id="interests">
 
+            <h2>Research Interests</h2>
 
-      <h2>Research Summary</h2>
+            <p>
+                General relativity, compact objects, relativistic radiation transport,
+                Kerr spacetime, X-ray polarimetry, black-hole timing signatures,
+                neutron stars, and observable signatures of strong gravity.
+            </p>
 
-      <p>
-        My research focuses on polarization transport,
-        relativistic timing phenomena, and radiation transport in Kerr spacetime,
-        with applications to X-ray polarimetry (IXPE),
-        black-hole spin diagnostics, and compact-object astrophysics.
-        I develop computational frameworks for strong-gravity observables
-        using numerical methods in Python and C++.
-      </p>
+        </section>
 
+        <!-- RESEARCH SUMMARY -->
 
-      <h2 id="publications">Publications</h2>
+        <section id="summary">
 
-      <div class="paper">
+            <h2>Research Summary</h2>
 
-        <div class="paper-title">
+            <p>
+                My research focuses on polarization transport, relativistic timing
+                phenomena, and radiation transport in Kerr spacetime, with
+                applications to X-ray polarimetry (IXPE), black-hole spin diagnostics,
+                and compact-object astrophysics. I develop computational frameworks
+                for strong-gravity observables using numerical methods in Python and C++.
+            </p>
 
-          <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652"
-             target="_blank">
+        </section>
 
-            Kerr Polarization Transport: Accuracy and Performance
-            in General Relativistic Light Propagation
+        <!-- PUBLICATIONS -->
 
-          </a>
+        <section id="publications">
 
-        </div>
+            <h2>Publications</h2>
 
-        <div>
-          <em>The Astrophysical Journal</em> (2026)
-        </div>
+            <div class="paper">
 
-        <p>
-          Developed and validated a computational framework for
-          general relativistic polarization transport in Kerr spacetime
-          using stable observer-screen gauge conditions
-          and efficient RK4 integration techniques.
-        </p>
+                <div class="paper-title">
+                    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652" target="_blank">
+                        Kerr Polarization Transport: Accuracy and Performance in General Relativistic Light Propagation
+                    </a>
+                </div>
 
-      </div>
+                <div class="journal">
+                    The Astrophysical Journal (2026)
+                </div>
 
+                <p>
+                    Developed and validated a computational framework for general
+                    relativistic polarization transport in Kerr spacetime using stable
+                    observer-screen gauge conditions and efficient RK4 integration techniques.
+                </p>
 
-      <h2 id="submitted-work">Submitted Work</h2>
+            </div>
 
-      <div class="paper">
+        </section>
 
-        <div class="paper-title">
+        <!-- SUBMITTED WORK -->
 
-          <a href="https://arxiv.org/abs/2605.11734"
-             target="_blank">
+        <section id="submitted">
 
-            A New Timing Signature of Black Hole Spin:
-            Time-Delay Asymmetry in Kerr Spacetime
+            <h2>Submitted Work</h2>
 
-          </a>
+            <div class="paper">
 
-        </div>
+                <div class="paper-title">
+                    A New Timing Signature of Black Hole Spin:
+                    Time-Delay Asymmetry in Kerr Spacetime
+                </div>
 
-        <div class="status">
-          Submitted to <em>Classical and Quantum Gravity</em> (CQG);
-          currently under review.
-        </div>
+                <div class="journal">
+                    Submitted to Classical and Quantum Gravity (CQG); under review.
+                </div>
 
-        <p>
-          Introduces mirror-paired relativistic time-delay asymmetries
-          in Kerr spacetime as a potential observable signature
-          of frame dragging and black-hole spin.
-        </p>
+                <p>
+                    Introduces mirror-paired relativistic time-delay asymmetries
+                    in Kerr spacetime as a potential observable signature of
+                    frame dragging and black-hole spin.
+                </p>
 
-      </div>
+            </div>
 
+        </section>
 
-      <h2 id="research-experience">Research Experience</h2>
+        <!-- RESEARCH EXPERIENCE -->
 
+        <section id="experience">
 
-      <h3>Relativistic Polarization and Timing in Kerr Spacetime</h3>
+            <h2>Research Experience</h2>
 
-      <p>
-        Developed computational frameworks for relativistic polarization transport,
-        EVPA evolution, and timing asymmetries near rotating black holes
-        using numerical ray-tracing methods in Kerr spacetime.
-      </p>
+            <div class="paper">
 
+                <div class="paper-title">
+                    Relativistic Polarization and Timing in Kerr Spacetime
+                </div>
 
-      <h3>Gaia-Based Photometric Analysis of HMXBs</h3>
+                <p>
+                    Developed computational frameworks for relativistic polarization
+                    transport, EVPA evolution, and timing asymmetries near rotating
+                    black holes using numerical ray-tracing methods in Kerr spacetime.
+                </p>
 
-      <p>
-        Performed Gaia-calibrated photometric reduction and optical variability analysis
-        of high-mass X-ray binaries in collaboration with Prof. Joshua Tan.
-      </p>
+            </div>
 
+            <div class="paper">
 
-      <h3>Neutron-Star Equation of State and Tidal Deformability</h3>
+                <div class="paper-title">
+                    Gaia-Based Photometric Analysis of HMXBs
+                </div>
 
-      <p>
-        Computed neutron-star mass-radius relations and tidal deformabilities
-        from tabulated EOS models and compared predictions with GW170817 constraints.
-      </p>
+                <p>
+                    Performed Gaia-calibrated photometric reduction and optical variability
+                    analysis of high-mass X-ray binaries in collaboration with Prof. Joshua Tan.
+                </p>
 
+            </div>
 
-      <h2>Independent Study & Training</h2>
+            <div class="paper">
 
-      <p>
-        Completed graduate coursework and independent study
-        in general relativity, compact objects,
-        and computational astrophysics at CCNY.
-        Much of my current research program was developed
-        through self-directed theoretical and computational work
-        in relativistic astrophysics.
-      </p>
+                <div class="paper-title">
+                    Neutron-Star Equation of State and Tidal Deformability
+                </div>
 
+                <p>
+                    Computed neutron-star mass-radius relations and tidal deformabilities
+                    from tabulated EOS models and compared predictions with GW170817 constraints.
+                </p>
 
-      <h2>Notes & Resources</h2>
+            </div>
 
-      <p>
-        I plan to upload selected notes, derivations,
-        and problem-solving materials related to
-        general relativity, black holes, neutron stars,
-        compact objects, and computational astrophysics.
-      </p>
+        </section>
 
-      <ul>
+        <!-- TRAINING -->
 
-        <li>General Relativity notes</li>
+        <section id="training">
 
-        <li>Black hole physics notes</li>
+            <h2>Independent Study & Training</h2>
 
-        <li>Neutron star and compact object notes</li>
+            <p>
+                Completed graduate coursework and independent study in general relativity,
+                compact objects, and computational astrophysics at CCNY. Much of my current
+                research program was developed through self-directed theoretical and
+                computational work in relativistic astrophysics.
+            </p>
 
-        <li>Relativistic ray tracing and polarization transport notes</li>
+        </section>
 
-        <li>Selected computational astrophysics notebooks and derivations</li>
+        <!-- NOTES -->
 
-      </ul>
+        <section id="notes">
 
+            <h2>Notes & Resources</h2>
 
-      <h2 id="teaching">Teaching</h2>
+            <p>
+                I plan to upload selected notes, derivations, and problem-solving materials
+                related to general relativity, black holes, neutron stars, compact objects,
+                and computational astrophysics.
+            </p>
 
-      <p>
-        Teaching assistant and laboratory instructor
-        for introductory physics at CCNY,
-        with additional experience tutoring calculus,
-        algebra, geometry, and university-level physics.
-      </p>
+            <ul>
+                <li>General Relativity notes</li>
+                <li>Black hole physics notes</li>
+                <li>Neutron star and compact object notes</li>
+                <li>Relativistic ray tracing and polarization transport notes</li>
+                <li>Selected computational astrophysics notebooks and derivations</li>
+            </ul>
 
+        </section>
 
-      <h2>Contact</h2>
+        <!-- TEACHING -->
 
-      <p>
+        <section id="teaching">
 
-        Email:
-        <a href="mailto:shakibul.chowdhury@gmail.com">
-          shakibul.chowdhury@gmail.com
-        </a>
+            <h2>Teaching</h2>
 
-      </p>
+            <p>
+                Teaching assistant and laboratory instructor for introductory physics at CCNY,
+                with additional experience tutoring calculus, algebra, geometry,
+                and university-level physics.
+            </p>
 
+        </section>
 
-      <footer>
-        © 2026 Shakibul Chowdhury
-      </footer>
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <h2>Contact</h2>
+
+            <p>
+                Email:
+                <a href="mailto:shakibul.chowdhury@gmail.com">
+                    shakibul.chowdhury@gmail.com
+                </a>
+            </p>
+
+            <p>
+                ORCID:
+                <a href="https://orcid.org/0009-0005-7949-8984" target="_blank">
+                    0009-0005-7949-8984
+                </a>
+            </p>
+
+        </section>
 
     </main>
 
-  </div>
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Shakibul Chowdhury
+    </footer>
+
+</div>
 
 </body>
-
 </html>
