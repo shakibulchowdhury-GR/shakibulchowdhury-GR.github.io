@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,49 +8,52 @@
   <title>Shakibul Chowdhury</title>
 
   <style>
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      max-width: 860px;
-      margin: 40px auto;
-      padding: 0 28px;
-      line-height: 1.65;
+      max-width: 980px;
+      margin: 50px auto;
+      padding: 0 40px;
+      line-height: 1.72;
       color: #111;
-      background: #fff;
+      background: #ffffff;
+      font-size: 1.03rem;
     }
 
     h1 {
-      font-size: 2.35rem;
-      margin-bottom: 6px;
+      font-size: 3rem;
+      margin-bottom: 8px;
       color: #111;
+      font-weight: 700;
     }
 
     h2 {
-      margin-top: 48px;
-      margin-bottom: 14px;
-      font-size: 1.45rem;
+      margin-top: 60px;
+      margin-bottom: 18px;
+      font-size: 1.7rem;
       color: #1f4e79;
-      border-bottom: 1px solid #d8d8d8;
-      padding-bottom: 5px;
+      border-bottom: 1px solid #d9d9d9;
+      padding-bottom: 6px;
     }
 
     h3 {
-      margin-top: 24px;
-      margin-bottom: 6px;
-      font-size: 1.08rem;
+      margin-top: 28px;
+      margin-bottom: 8px;
+      font-size: 1.15rem;
       color: #222;
     }
 
     p {
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     ul {
-      margin-left: 22px;
-      margin-bottom: 18px;
+      margin-left: 28px;
+      margin-bottom: 20px;
     }
 
     li {
-      margin-bottom: 7px;
+      margin-bottom: 9px;
     }
 
     a {
@@ -64,40 +68,47 @@
 
     .subtitle {
       color: #333;
-      margin-bottom: 4px;
-      font-size: 1.03rem;
+      margin-bottom: 5px;
+      font-size: 1.08rem;
     }
 
     .top-links {
-      margin-top: 14px;
-      margin-bottom: 34px;
+      margin-top: 22px;
+      margin-bottom: 42px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #e2e2e2;
     }
 
     .top-links a {
-      margin-right: 18px;
+      margin-right: 24px;
+      font-size: 0.98rem;
     }
 
     .paper {
-      margin-bottom: 26px;
+      margin-bottom: 34px;
     }
 
     .paper-title {
       font-weight: 700;
+      font-size: 1.12rem;
       color: #111;
+      margin-bottom: 6px;
     }
 
     .status {
       color: #555;
       font-style: italic;
+      margin-bottom: 10px;
     }
 
     footer {
-      margin-top: 65px;
+      margin-top: 80px;
       padding-top: 18px;
       border-top: 1px solid #ddd;
       color: #666;
       font-size: 0.92rem;
     }
+
   </style>
 </head>
 
@@ -107,14 +118,31 @@
 
   <div class="subtitle">Astrophysics Researcher</div>
   <div class="subtitle">City College of New York (CUNY)</div>
-  <div class="subtitle">Relativistic Astrophysics · Compact Objects · Strong Gravity</div>
-
-  <div class="top-links">
-    <a href="mailto:shakibul.chowdhury@gmail.com">Email</a>
-    <a href="files/Shak_CV.pdf" target="_blank">CV</a>
+  <div class="subtitle">
+    Relativistic Astrophysics · Compact Objects · Strong Gravity
   </div>
 
-  <h2>Research Interests</h2>
+  <div class="top-links">
+
+    <a href="#research-interests">Research Interests</a>
+
+    <a href="#publications">Publications</a>
+
+    <a href="#submitted-work">Submitted Work</a>
+
+    <a href="#research-experience">Research Experience</a>
+
+    <a href="#teaching">Teaching</a>
+
+    <a href="notes.html">Notes & Resources</a>
+
+    <a href="files/Shak_CV.pdf" target="_blank">CV</a>
+
+    <a href="mailto:shakibul.chowdhury@gmail.com">Email</a>
+
+  </div>
+
+  <h2 id="research-interests">Research Interests</h2>
 
   <p>
     General relativity, compact objects, relativistic radiation transport,
@@ -122,115 +150,141 @@
     neutron stars, and observable signatures of strong gravity.
   </p>
 
+
   <h2>Research Summary</h2>
 
   <p>
     My research focuses on polarization transport, relativistic timing phenomena,
     and radiation transport in Kerr spacetime, with applications to X-ray polarimetry
-    (IXPE), black-hole spin diagnostics, and compact-object astrophysics. I develop
-    computational frameworks for strong-gravity observables using numerical methods
-    in Python and C++.
+    (IXPE), black-hole spin diagnostics, and compact-object astrophysics.
+    I develop computational frameworks for strong-gravity observables using
+    numerical methods in Python and C++.
   </p>
 
-  <h2>Publications</h2>
+
+  <h2 id="publications">Publications</h2>
 
   <div class="paper">
+
     <div class="paper-title">
-  <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652" target="_blank">
-    Kerr Polarization Transport: Accuracy and Performance in General Relativistic Light Propagation
-  </a>
-</div>
+
+      <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652"
+         target="_blank">
+
+        Kerr Polarization Transport: Accuracy and Performance
+        in General Relativistic Light Propagation
+
+      </a>
+
+    </div>
+
     <div>
       <em>The Astrophysical Journal</em> (2026)
     </div>
+
     <p>
-      Developed and validated a computational framework for general relativistic
-      polarization transport in Kerr spacetime using stable observer-screen gauge
-      conditions and efficient RK4 integration techniques.
+      Developed and validated a computational framework for
+      general relativistic polarization transport in Kerr spacetime
+      using stable observer-screen gauge conditions and efficient
+      RK4 integration techniques.
     </p>
+
   </div>
 
-  <h2>Submitted Work</h2>
+
+  <h2 id="submitted-work">Submitted Work</h2>
 
   <div class="paper">
+
     <div class="paper-title">
-      A New Timing Signature of Black Hole Spin: Time-Delay Asymmetry in Kerr Spacetime
+
+      <a href="https://arxiv.org/abs/2605.11734"
+         target="_blank">
+
+        A New Timing Signature of Black Hole Spin:
+        Time-Delay Asymmetry in Kerr Spacetime
+
+      </a>
+
     </div>
+
     <div class="status">
-      Submitted to <em>Classical and Quantum Gravity</em> (CQG); under review.
+      Submitted to <em>Classical and Quantum Gravity</em> (CQG);
+      under review.
     </div>
+
     <p>
-      Introduces mirror-paired relativistic time-delay asymmetries in Kerr spacetime
-      as a potential observable signature of frame dragging and black-hole spin.
+      Introduces mirror-paired relativistic time-delay asymmetries
+      in Kerr spacetime as a potential observable signature of
+      frame dragging and black-hole spin.
     </p>
+
   </div>
 
-  <h2>Research Experience</h2>
+
+  <h2 id="research-experience">Research Experience</h2>
+
 
   <h3>Relativistic Polarization and Timing in Kerr Spacetime</h3>
+
   <p>
-    Developed computational frameworks for relativistic polarization transport,
-    EVPA evolution, and timing asymmetries near rotating black holes using numerical
-    ray-tracing methods in Kerr spacetime.
+    Developed computational frameworks for relativistic polarization
+    transport, EVPA evolution, and timing asymmetries near rotating
+    black holes using numerical ray-tracing methods in Kerr spacetime.
   </p>
+
 
   <h3>Gaia-Based Photometric Analysis of HMXBs</h3>
+
   <p>
-    Performed Gaia-calibrated photometric reduction and optical variability analysis
-    of high-mass X-ray binaries in collaboration with Prof. Joshua Tan.
+    Performed Gaia-calibrated photometric reduction and optical variability
+    analysis of high-mass X-ray binaries in collaboration with Prof. Joshua Tan.
   </p>
 
+
   <h3>Neutron-Star Equation of State and Tidal Deformability</h3>
+
   <p>
-    Computed neutron-star mass-radius relations and tidal deformabilities from
-    tabulated EOS models and compared predictions with GW170817 constraints.
+    Computed neutron-star mass-radius relations and tidal deformabilities
+    from tabulated EOS models and compared predictions with GW170817 constraints.
   </p>
+
 
   <h2>Independent Study & Training</h2>
 
   <p>
     Completed graduate coursework and independent study in general relativity,
-    compact objects, and computational astrophysics at CCNY. Much of my current
-    research program was developed through self-directed theoretical and computational
-    work in relativistic astrophysics.
+    compact objects, and computational astrophysics at CCNY.
+    Much of my current research program was developed through self-directed
+    theoretical and computational work in relativistic astrophysics.
   </p>
 
-  <h2>Notes & Resources</h2>
 
-  <p>
-    I plan to upload selected notes, derivations, and problem-solving materials related
-    to general relativity, black holes, neutron stars, compact objects, and computational
-    astrophysics.
-  </p>
-
-  <ul>
-    <li>General Relativity notes</li>
-    <li>Black hole physics notes</li>
-    <li>Neutron star and compact object notes</li>
-    <li>Relativistic ray tracing and polarization transport notes</li>
-    <li>Selected computational astrophysics notebooks and derivations</li>
-  </ul>
-
-  <h2>Teaching</h2>
+  <h2 id="teaching">Teaching</h2>
 
   <p>
     Teaching assistant and laboratory instructor for introductory physics at CCNY,
-    with additional experience tutoring calculus, algebra, geometry, and university-level
-    physics.
+    with additional experience tutoring calculus, algebra, geometry,
+    and university-level physics.
   </p>
+
 
   <h2>Contact</h2>
 
   <p>
+
     Email:
     <a href="mailto:shakibul.chowdhury@gmail.com">
       shakibul.chowdhury@gmail.com
     </a>
+
   </p>
+
 
   <footer>
     © 2026 Shakibul Chowdhury
   </footer>
 
 </body>
+
 </html>
