@@ -15,9 +15,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 12% 10%, rgba(160, 185, 220, 0.30), transparent 30%),
-    radial-gradient(circle at 88% 12%, rgba(190, 205, 235, 0.24), transparent 34%),
-    radial-gradient(circle at 50% 100%, rgba(220, 230, 245, 0.30), transparent 42%),
+    radial-gradient(circle at 12% 10%, rgba(160, 185, 220, 0.28), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(190, 205, 235, 0.22), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(220, 230, 245, 0.28), transparent 42%),
     linear-gradient(135deg, #eef3f8, #f8fafc 45%, #eef4fb);
   color: #222;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -30,10 +30,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle, rgba(80, 105, 135, 0.14) 1px, transparent 1px),
-    radial-gradient(circle, rgba(80, 105, 135, 0.08) 1px, transparent 1px);
-  background-size: 130px 130px, 190px 190px;
-  background-position: 20px 30px, 80px 100px;
+    radial-gradient(circle, rgba(80, 105, 135, 0.12) 1px, transparent 1px),
+    radial-gradient(circle, rgba(80, 105, 135, 0.06) 1px, transparent 1px);
+  background-size: 140px 140px, 200px 200px;
+  background-position: 30px 40px, 90px 120px;
   opacity: 0.22;
 }
 
@@ -45,11 +45,16 @@ body::before {
 }
 
 .site-header {
-  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(238,244,251,0.96));
-  padding: 58px 62px;
-  border-radius: 18px 18px 0 0;
-  border: 1px solid #d4dee9;
-  box-shadow: 0 10px 30px rgba(55, 80, 110, 0.08);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.96),
+      rgba(238,244,251,0.97)
+    );
+  padding: 62px;
+  border-radius: 22px 22px 0 0;
+  border: 1px solid #d5e0ea;
+  box-shadow: 0 12px 32px rgba(55, 80, 110, 0.08);
 }
 
 .site-title {
@@ -61,25 +66,25 @@ body::before {
 }
 
 .site-subtitle {
-  margin-top: 12px;
+  margin-top: 14px;
   font-size: 1.35rem;
-  color: #4e6478;
+  color: #4d6478;
 }
 
 .site-affiliation {
   margin-top: 10px;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   color: #627587;
 }
 
 .site-tags {
-  margin-top: 20px;
+  margin-top: 22px;
   color: #728292;
   font-size: 1rem;
 }
 
 .profile-links {
-  margin-top: 22px;
+  margin-top: 26px;
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -87,25 +92,26 @@ body::before {
 
 .profile-links a {
   color: #2f5877;
-  background: rgba(238, 244, 251, 0.9);
-  border: 1px solid #d4dee9;
-  padding: 6px 13px;
+  background: rgba(241, 246, 252, 0.95);
+  border: 1px solid #d5e0ea;
+  padding: 7px 14px;
   border-radius: 999px;
   font-size: 0.94rem;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .profile-links a:hover {
-  background: #e4edf6;
-  text-decoration: none;
+  background: #e7eff8;
+  transform: translateY(-1px);
 }
 
 .nav-bar {
-  background: #7b8fa1;
-  padding: 14px 36px;
-  border-radius: 0 0 18px 18px;
-  margin-bottom: 42px;
-  box-shadow: 0 8px 22px rgba(55, 80, 110, 0.11);
+  background: #8094a5;
+  padding: 15px 36px;
+  border-radius: 0 0 22px 22px;
+  margin-bottom: 44px;
+  box-shadow: 0 8px 22px rgba(55, 80, 110, 0.10);
 }
 
 .nav-links {
@@ -118,7 +124,7 @@ body::before {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   transition: opacity 0.2s ease;
 }
 
@@ -127,15 +133,15 @@ body::before {
 }
 
 .content {
-  background: rgba(255, 255, 255, 0.96);
-  padding: 62px;
-  border-radius: 18px;
-  border: 1px solid #d8e2ec;
+  background: rgba(255, 255, 255, 0.97);
+  padding: 68px;
+  border-radius: 22px;
+  border: 1px solid #dbe4ed;
   box-shadow: 0 12px 35px rgba(55, 80, 110, 0.08);
 }
 
 section {
-  margin-bottom: 78px;
+  margin-bottom: 82px;
 }
 
 section:last-child {
@@ -145,9 +151,9 @@ section:last-child {
 h2 {
   font-size: 2rem;
   color: #2f5877;
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #d9e1e8;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dbe3eb;
 }
 
 p {
@@ -156,14 +162,14 @@ p {
 }
 
 .paper {
-  margin-top: 32px;
-  padding-bottom: 8px;
+  margin-top: 34px;
 }
 
 .paper-title {
   font-weight: 700;
   font-size: 1.18rem;
   margin-bottom: 8px;
+  color: #1f2d3a;
 }
 
 .paper-title a {
@@ -177,12 +183,12 @@ p {
 
 .journal {
   font-style: italic;
-  color: #666;
-  margin-bottom: 12px;
+  color: #6b7280;
+  margin-bottom: 14px;
 }
 
 ul {
-  padding-left: 30px;
+  padding-left: 28px;
 }
 
 li {
@@ -198,8 +204,24 @@ a:hover {
   text-decoration: underline;
 }
 
+.news-box {
+  background: #f6f9fc;
+  border-left: 4px solid #7f95a8;
+  padding: 18px 22px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.news-item {
+  margin-bottom: 12px;
+}
+
+.news-item:last-child {
+  margin-bottom: 0;
+}
+
 footer {
-  margin-top: 60px;
+  margin-top: 65px;
   text-align: center;
   color: #667788;
   font-size: 0.95rem;
@@ -208,7 +230,7 @@ footer {
 @media (max-width: 768px) {
 
   .site-title {
-    font-size: 2.6rem;
+    font-size: 2.7rem;
   }
 
   .site-header {
@@ -216,11 +238,11 @@ footer {
   }
 
   .content {
-    padding: 35px;
+    padding: 36px;
   }
 
   .nav-bar {
-    padding: 16px 20px;
+    padding: 18px 20px;
   }
 
   .nav-links {
@@ -243,7 +265,7 @@ Shakibul Chowdhury
 </h1>
 
 <div class="site-subtitle">
-Astrophysics Researcher
+Researcher in General Relativity and Astrophysics
 </div>
 
 <div class="site-affiliation">
@@ -255,10 +277,23 @@ General Relativity • Black Holes • X-ray Polarimetry • Compact Objects
 </div>
 
 <div class="profile-links">
-<a href="https://arxiv.org/abs/2605.11734" target="_blank">arXiv</a>
-<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652" target="_blank">ApJ Paper</a>
-<a href="files/Shak_CV.pdf" target="_blank">CV</a>
-<a href="mailto:shakibul.chowdhury@gmail.com">Email</a>
+
+<a href="https://arxiv.org/abs/2605.11734" target="_blank">
+arXiv
+</a>
+
+<a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652" target="_blank">
+ApJ Paper
+</a>
+
+<a href="files/Shak_CV.pdf" target="_blank">
+CV
+</a>
+
+<a href="mailto:shakibul.chowdhury@gmail.com">
+Email
+</a>
+
 </div>
 
 </header>
@@ -269,6 +304,7 @@ General Relativity • Black Holes • X-ray Polarimetry • Compact Objects
 
 <a href="#interests">Research Interests</a>
 <a href="#summary">Research Summary</a>
+<a href="#news">News</a>
 <a href="#current">Current Projects</a>
 <a href="#publications">Publications</a>
 <a href="#submitted">Submitted Work</a>
@@ -309,6 +345,28 @@ for strong-gravity observables using numerical methods in Python and C++.
 
 </section>
 
+<section id="news">
+
+<h2>News</h2>
+
+<div class="news-box">
+
+<div class="news-item">
+• Paper accepted in <i>The Astrophysical Journal</i> (2026)
+</div>
+
+<div class="news-item">
+• Current work on Kerr time-delay asymmetry under review at CQG
+</div>
+
+<div class="news-item">
+• Ongoing research in relativistic timing and polarization transport
+</div>
+
+</div>
+
+</section>
+
 <section id="current">
 
 <h2>Current Projects</h2>
@@ -320,9 +378,9 @@ Relativistic Time-Delay Asymmetry in Kerr Spacetime
 </div>
 
 <p>
-I am studying mirror-paired photon arrival-time asymmetries in Kerr spacetime
+Studying mirror-paired photon arrival-time asymmetries in Kerr spacetime
 as potential timing signatures of black-hole spin and frame dragging.
-This work connects relativistic ray tracing, image-plane delay maps,
+This work combines relativistic ray tracing, image-plane delay maps,
 and observationally motivated timing diagnostics.
 </p>
 
@@ -335,9 +393,9 @@ Polarization Transport in Strong Gravity
 </div>
 
 <p>
-I develop and test numerical methods for EVPA evolution and parallel transport
-of polarization vectors along null geodesics, with applications to X-ray
-polarimetry and compact-object observations.
+Developing numerical methods for EVPA evolution and parallel transport
+of polarization vectors along null geodesics, with applications to
+X-ray polarimetry and compact-object observations.
 </p>
 
 </div>
@@ -351,9 +409,13 @@ polarimetry and compact-object observations.
 <div class="paper">
 
 <div class="paper-title">
+
 <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae6652" target="_blank">
+
 Kerr Polarization Transport: Accuracy and Performance in General Relativistic Light Propagation
+
 </a>
+
 </div>
 
 <div class="journal">
@@ -361,9 +423,9 @@ The Astrophysical Journal (2026)
 </div>
 
 <p>
-Developed and validated a computational framework for general
-relativistic polarization transport in Kerr spacetime using stable
-observer-screen gauge conditions and efficient RK4 integration techniques.
+Developed and validated a computational framework for general relativistic
+polarization transport in Kerr spacetime using stable observer-screen
+gauge conditions and efficient RK4 integration techniques.
 </p>
 
 </div>
@@ -377,9 +439,13 @@ observer-screen gauge conditions and efficient RK4 integration techniques.
 <div class="paper">
 
 <div class="paper-title">
+
 <a href="https://arxiv.org/abs/2605.11734" target="_blank">
+
 A New Timing Signature of Black Hole Spin: Time-Delay Asymmetry in Kerr Spacetime
+
 </a>
+
 </div>
 
 <div class="journal">
@@ -387,9 +453,9 @@ Submitted to Classical and Quantum Gravity (CQG); under review.
 </div>
 
 <p>
-Introduces mirror-paired relativistic time-delay asymmetries
-in Kerr spacetime as a potential observable signature of
-frame dragging and black-hole spin.
+Introduces mirror-paired relativistic time-delay asymmetries in Kerr
+spacetime as a potential observable signature of frame dragging
+and black-hole spin.
 </p>
 
 </div>
@@ -466,11 +532,17 @@ and computational astrophysics.
 </p>
 
 <ul>
+
 <li>General Relativity notes</li>
+
 <li>Black hole physics notes</li>
+
 <li>Neutron star and compact object notes</li>
+
 <li>Relativistic ray tracing and polarization transport notes</li>
+
 <li>Selected computational astrophysics notebooks and derivations</li>
+
 </ul>
 
 </section>
@@ -492,10 +564,12 @@ and university-level physics.
 <h2>Contact</h2>
 
 <p>
+
 Email:
 <a href="mailto:shakibul.chowdhury@gmail.com">
 shakibul.chowdhury@gmail.com
 </a>
+
 </p>
 
 </section>
