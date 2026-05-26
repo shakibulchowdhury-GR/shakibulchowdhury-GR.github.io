@@ -12,39 +12,75 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       max-width: 980px;
-      margin: 50px auto;
+      margin: 40px auto;
       padding: 0 40px;
-      line-height: 1.72;
+      line-height: 1.75;
       color: #111;
       background: #ffffff;
       font-size: 1.03rem;
     }
 
+    .hero-box {
+      background: #f5f8fc;
+      border: 1px solid #dbe5f0;
+      border-radius: 14px;
+      padding: 38px 42px;
+      margin-bottom: 60px;
+    }
+
     h1 {
-      font-size: 3rem;
-      margin-bottom: 8px;
+      font-size: 3.2rem;
+      margin-bottom: 10px;
       color: #111;
       font-weight: 700;
     }
 
+    .subtitle {
+      color: #333;
+      margin-bottom: 6px;
+      font-size: 1.08rem;
+    }
+
+    .top-links {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .top-links a {
+      background: #e8eef5;
+      padding: 8px 15px;
+      border-radius: 8px;
+      color: #1f4e79;
+      font-size: 0.96rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .top-links a:hover {
+      background: #d9e4f0;
+    }
+
     h2 {
-      margin-top: 60px;
+      margin-top: 62px;
       margin-bottom: 18px;
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       color: #1f4e79;
       border-bottom: 1px solid #d9d9d9;
       padding-bottom: 6px;
     }
 
     h3 {
-      margin-top: 28px;
-      margin-bottom: 8px;
-      font-size: 1.15rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.18rem;
       color: #222;
     }
 
     p {
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     ul {
@@ -53,7 +89,7 @@
     }
 
     li {
-      margin-bottom: 9px;
+      margin-bottom: 10px;
     }
 
     a {
@@ -66,43 +102,24 @@
       text-decoration: underline;
     }
 
-    .subtitle {
-      color: #333;
-      margin-bottom: 5px;
-      font-size: 1.08rem;
-    }
-
-    .top-links {
-      margin-top: 22px;
-      margin-bottom: 42px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid #e2e2e2;
-    }
-
-    .top-links a {
-      margin-right: 24px;
-      font-size: 0.98rem;
-    }
-
     .paper {
-      margin-bottom: 34px;
+      margin-bottom: 38px;
     }
 
     .paper-title {
       font-weight: 700;
-      font-size: 1.12rem;
-      color: #111;
+      font-size: 1.14rem;
       margin-bottom: 6px;
     }
 
     .status {
       color: #555;
       font-style: italic;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     footer {
-      margin-top: 80px;
+      margin-top: 90px;
       padding-top: 18px;
       border-top: 1px solid #ddd;
       color: #666;
@@ -110,37 +127,47 @@
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <h1>Shakibul Chowdhury</h1>
+  <div class="hero-box">
 
-  <div class="subtitle">Astrophysics Researcher</div>
-  <div class="subtitle">City College of New York (CUNY)</div>
-  <div class="subtitle">
-    Relativistic Astrophysics · Compact Objects · Strong Gravity
+    <h1>Shakibul Chowdhury</h1>
+
+    <div class="subtitle">Astrophysics Researcher</div>
+
+    <div class="subtitle">
+      City College of New York (CUNY)
+    </div>
+
+    <div class="subtitle">
+      Relativistic Astrophysics · Compact Objects · Strong Gravity
+    </div>
+
+    <div class="top-links">
+
+      <a href="#research-interests">Research Interests</a>
+
+      <a href="#publications">Publications</a>
+
+      <a href="#submitted-work">Submitted Work</a>
+
+      <a href="#research-experience">Research Experience</a>
+
+      <a href="#teaching">Teaching</a>
+
+      <a href="notes.html">Notes & Resources</a>
+
+      <a href="files/Shak_CV.pdf" target="_blank">CV</a>
+
+      <a href="mailto:shakibul.chowdhury@gmail.com">Email</a>
+
+    </div>
+
   </div>
 
-  <div class="top-links">
-
-    <a href="#research-interests">Research Interests</a>
-
-    <a href="#publications">Publications</a>
-
-    <a href="#submitted-work">Submitted Work</a>
-
-    <a href="#research-experience">Research Experience</a>
-
-    <a href="#teaching">Teaching</a>
-
-    <a href="notes.html">Notes & Resources</a>
-
-    <a href="files/Shak_CV.pdf" target="_blank">CV</a>
-
-    <a href="mailto:shakibul.chowdhury@gmail.com">Email</a>
-
-  </div>
 
   <h2 id="research-interests">Research Interests</h2>
 
@@ -224,7 +251,6 @@
 
   <h2 id="research-experience">Research Experience</h2>
 
-
   <h3>Relativistic Polarization and Timing in Kerr Spacetime</h3>
 
   <p>
@@ -258,6 +284,29 @@
     Much of my current research program was developed through self-directed
     theoretical and computational work in relativistic astrophysics.
   </p>
+
+
+  <h2>Notes & Resources</h2>
+
+  <p>
+    I plan to upload selected notes, derivations, and problem-solving materials
+    related to general relativity, black holes, neutron stars,
+    compact objects, and computational astrophysics.
+  </p>
+
+  <ul>
+
+    <li>General Relativity notes</li>
+
+    <li>Black hole physics notes</li>
+
+    <li>Neutron star and compact object notes</li>
+
+    <li>Relativistic ray tracing and polarization transport notes</li>
+
+    <li>Selected computational astrophysics notebooks and derivations</li>
+
+  </ul>
 
 
   <h2 id="teaching">Teaching</h2>
