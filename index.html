@@ -15,23 +15,37 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(160, 185, 220, 0.35), transparent 35%),
-    radial-gradient(circle at top right, rgba(210, 220, 245, 0.35), transparent 40%),
-    linear-gradient(135deg, #eef3f8, #f7f9fc 45%, #eef4fb);
+    radial-gradient(circle at 12% 10%, rgba(160, 185, 220, 0.32), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(190, 205, 235, 0.28), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(220, 230, 245, 0.35), transparent 42%),
+    linear-gradient(135deg, #eef3f8, #f8fafc 45%, #eef4fb);
   color: #222;
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.75;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(80, 105, 135, 0.18) 1px, transparent 1px),
+    radial-gradient(circle, rgba(80, 105, 135, 0.10) 1px, transparent 1px);
+  background-size: 120px 120px, 180px 180px;
+  background-position: 20px 30px, 80px 100px;
+  opacity: 0.28;
 }
 
 .page-wrapper {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
+  position: relative;
 }
 
 .site-header {
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.92), rgba(236,243,250,0.95));
+  background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(238,244,251,0.96));
   padding: 55px 60px;
   border-radius: 18px 18px 0 0;
   border: 1px solid #d4dee9;
@@ -91,7 +105,7 @@ body {
 }
 
 .content {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   padding: 60px;
   border-radius: 18px;
   border: 1px solid #d8e2ec;
@@ -99,13 +113,17 @@ body {
 }
 
 section {
-  margin-bottom: 65px;
+  margin-bottom: 72px;
+}
+
+section:last-child {
+  margin-bottom: 0;
 }
 
 h2 {
   font-size: 2rem;
   color: #2f5877;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   padding-bottom: 10px;
   border-bottom: 1px solid #d9e1e8;
 }
@@ -116,7 +134,7 @@ p {
 }
 
 .paper {
-  margin-top: 25px;
+  margin-top: 28px;
 }
 
 .paper-title {
